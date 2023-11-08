@@ -13,17 +13,16 @@ const key = {
     }
 }
 
-// aspect ratio 16:9 & Background
-canvas.width = 64 * 16
-canvas.height = 64 * 9 
+// aspect ratio 16:9 & Background (1600x900 Pixel Ratio)
+canvas.width = 100 * 16
+canvas.height = 100 * 9
 
 const player = new Player()
 
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
-    c.fillStyle = "white" 
-    c.fillRect(0, 0, canvas.width, canvas.height);
+    backgroundLevel1.draw()
 
     //Player moving
     player.velocity.x = 0
