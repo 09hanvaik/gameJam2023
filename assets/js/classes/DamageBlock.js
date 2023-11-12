@@ -1,9 +1,9 @@
-class Player {
+class DamageBlock {
     // Values and Variables
     constructor() {
         this.position = {
-            x: 100,
-            y: 500
+            x: 300,
+            y: 100
         }
 
         this.velocity = {
@@ -19,9 +19,9 @@ class Player {
         }
     }
 
-    // Player Looks
+    // DamageBlock Looks
     draw() {
-        c.fillStyle = "red" 
+        c.fillStyle = "blue" 
         c.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 
@@ -31,7 +31,7 @@ class Player {
         this.position.y += this.velocity.y
         this.sides.bottom = this.position.y + this.height
 
-        // Keeps player above bottom of canvas
+        // Keeps object above bottom of canvas
         if (this.sides.bottom + this.velocity.y < canvas.height) {
             this.velocity.y += this.gravity
             this.position.y++;

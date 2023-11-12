@@ -19,6 +19,9 @@ canvas.height = 100 * 9
 
 const player = new Player()
 
+// Block that gives damage
+const damageBlock = new DamageBlock();
+
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
@@ -32,7 +35,27 @@ function animate() {
         player.velocity.x = -4
     }
     player.draw()
-    player.update()   
+    player.update()
+
+    // Damage block falling when player goes under spawn point
+    if (player.position.x == 300) {
+        spawnBlock = true;
+    }
+    if (spawnBlock === true) {
+            damageBlock.draw()
+            damageBlock.update()
+        }
 }
 
 animate();
+
+// ---------- Collisions -------------
+// player collision
+
+// Damage block collision
+
+
+//----------- Health System ----------
+
+// 
+
