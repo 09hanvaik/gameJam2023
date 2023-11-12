@@ -24,6 +24,8 @@ const player = new Player();
 const damageBlock = new DamageBlock();
 var spawnBlock = false
 
+// damage counter
+var strike = 0
 
 
 function animate() {
@@ -44,6 +46,13 @@ function animate() {
     // when player goes under spawn point damageBlock falls
     if (player.position.x == 300) {
         spawnBlock = true;
+
+        //-----TEST---- damage dealt when player passes under spawn point
+        if (strike < 3) {
+            strike++
+        } else {
+            strike = 0
+        }
     }
     if (spawnBlock === true) {
         damageBlock.draw();
@@ -52,29 +61,35 @@ function animate() {
 
     // ---------- Collisions -------------
     // !!! NOT WORKING !!! Does not cause errors, for now illustrates concept, replace later
+
     // player and damage box overlap
-    if (player.position.x < damageBlock.position.x + damageBlock.width &&
-        player.position.x + player.width > damageBlock.position.x &&
-        player.position.y < damageBlock.position.y + damageBlock.height &&
-        player.position.y + player.height > damageBlock.y) {
+    // if (player.position.x < damageBlock.position.x + damageBlock.width &&
+    //     player.position.x + player.width > damageBlock.position.x &&
+    //     player.position.y < damageBlock.position.y + damageBlock.height &&
+    //     player.position.y + player.height > damageBlock.y) {
             //collision detected
-            var strike = strike++;
-    } else {
-        // no collision
-    }
+            // strike = strike++;
+    // } else {
+    //     // no collision
+    // }
 
     //----------- Health System ----------
     // heart icons 
     heart1.draw();
     heart2.draw();
     heart3.draw();
-    // if player has collided with block 
+    // if player has taken damage, a heart is removed
     if (strike === 1) {
-        emptyHeart1.draw()
+        console.log(strike)
+        emptyHeart3.draw()
     } else if (strike === 2) {
+        emptyHeart3.draw()
         emptyHeart2.draw()
     } else if (strike === 3) {
+        emptyHeart1.draw()
+        emptyHeart2.draw()
         emptyHeart3.draw()
+        // game over
     }
 }
 animate();
