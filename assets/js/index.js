@@ -1,4 +1,5 @@
 // Variables
+
 const canvas = document.querySelector("canvas")
 const c = canvas.getContext("2d")
 const key = {
@@ -14,18 +15,21 @@ const key = {
 }
 
 // aspect ratio 16:9 & Background (1600x900 Pixel Ratio)
-canvas.width = 100 * 16
-canvas.height = 100 * 9
+canvas.width = 100 * 16;
+canvas.height = 100 * 9;
 
-const player = new Player()
+const player = new Player();
 
-// Block that gives damage
+// Create damageBlock
 const damageBlock = new DamageBlock();
+var spawnBlock = false
+
+
 
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
-    backgroundLevel1.draw()
+    backgroundLevel1.draw();
 
     //Player moving
     player.velocity.x = 0
@@ -37,25 +41,47 @@ function animate() {
     player.draw()
     player.update()
 
-    // Damage block falling when player goes under spawn point
+    // when player goes under spawn point damageBlock falls
     if (player.position.x == 300) {
         spawnBlock = true;
     }
     if (spawnBlock === true) {
-            damageBlock.draw()
-            damageBlock.update()
-        }
-}
+        damageBlock.draw();
+        damageBlock.update();
+    }
 
+    // ---------- Collisions -------------
+    // !!! NOT WORKING !!! Does not cause errors, for now illustrates concept, replace later
+    // player and damage box overlap
+    if (player.position.x < damageBlock.position.x + damageBlock.width &&
+        player.position.x + player.width > damageBlock.position.x &&
+        player.position.y < damageBlock.position.y + damageBlock.height &&
+        player.position.y + player.height > damageBlock.y) {
+            //collision detected
+            var strike = strike++;
+    } else {
+        // no collision
+    }
+
+    //----------- Health System ----------
+    // heart icons 
+    heart1.draw();
+    heart2.draw();
+    heart3.draw();
+    // if player has collided with block 
+    if (strike === 1) {
+        emptyHeart1.draw()
+    } else if (strike === 2) {
+        emptyHeart2.draw()
+    } else if (strike === 3) {
+        emptyHeart3.draw()
+    }
+}
 animate();
 
-// ---------- Collisions -------------
-// player collision
-
-// Damage block collision
 
 
-//----------- Health System ----------
 
-// 
+
+
 
