@@ -3,7 +3,7 @@ class Player {
     constructor() {
         this.position = {
             x: 100,
-            y: 500
+            y: 100
         }
 
         this.velocity = {
