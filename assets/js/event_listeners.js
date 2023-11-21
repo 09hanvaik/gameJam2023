@@ -3,7 +3,7 @@
 window.addEventListener("keydown", (event) => {
     switch (event.key) {
         // Double jump
-        case "w":
+        case "space":
             if (player.velocity.y === 0) {
                 canDoubleJump = true
                 player.velocity.y = -20

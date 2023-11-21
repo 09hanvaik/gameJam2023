@@ -44,6 +44,7 @@ function animate() {
     player.update()
 
     // when player goes under spawn point damageBlock falls
+    // if timer is less than AMOUNT then spawning function happens 
     if (player.position.x == 300) {
         spawnBlock = true;
 
