@@ -1,6 +1,6 @@
 // Background
 
-class heartIcon {
+class icon {
     constructor({ position, imageSrc }) {
         this.position = position
         this.image = new Image()
