@@ -18,7 +18,9 @@ const key = {
 canvas.width = 100 * 16;
 canvas.height = 100 * 9;
 
-const player = new Player();
+const player = new Player({
+    collisionBlocks
+})
 
 // Create damageBlock
 const damageBlock = new DamageBlock();
@@ -68,8 +70,8 @@ function animate() {
     //     player.position.x + player.width > damageBlock.position.x &&
     //     player.position.y < damageBlock.position.y + damageBlock.height &&
     //     player.position.y + player.height > damageBlock.y) {
-            //collision detected
-            // strike = strike++;
+    //         collision detected
+    //         strike = strike++;
     // } else {
     //     // no collision
     // }

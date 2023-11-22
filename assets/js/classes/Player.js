@@ -1,9 +1,11 @@
 class Player {
     // Values and Variables
-    constructor() {
+    constructor({
+      collisionBlocks = []  
+    }) {
         this.position = {
             x: 100,
-            y: 100
+            y: 100,
         }
 
         this.velocity = {
@@ -15,8 +17,11 @@ class Player {
         this.width = 100
         this.height = 100
         this.sides = {
-            bottom: this.position.y + this.height
+            bottom: this.position.y + this.height,
         }
+
+        this.collisionBlocks = collisionBlocks
+        console.log(this.collisionBlocks)
     }
 
     // Player Looks
