@@ -31,7 +31,7 @@ var strike = 0
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
-    backgroundLevelMain.draw();
+    backgroundLevel1.draw();
 
     //Player moving
     player.velocity.x = 0
@@ -94,7 +94,7 @@ function animate() {
     }
 
     if (player.position.x == 1000){
-        window.location.href = "roomOne.html";
+        window.location.href = "roomTwo.html";
     }
 }
 animate();

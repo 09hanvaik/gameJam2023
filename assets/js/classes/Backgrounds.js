@@ -1,6 +1,6 @@
 // Background
 
-class Sprite {
+class Background {
     constructor({ position, imageSrc }) {
         this.position = position
         this.image = new Image()
@@ -16,10 +16,26 @@ class Sprite {
     }
 }
 
-const backgroundLevel1 = new Sprite({
+const backgroundLevelMain = new Background ({
+        position: {
+            x: 0,
+            y: 0,
+        },
+        imageSrc: "assets/img/2_game_background.png"
+    })
+
+const backgroundLevel1 = new Background ({
     position: {
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/2_game_background.png"
+    imageSrc: "assets/img/Level1_Room1.png"
+})
+
+const backgroundLevel2 = new Background ({
+    position: {
+        x: 0,
+        y: 0,
+    },
+    imageSrc: "assets/img/Level1_Room2.png"
 })
