@@ -19,7 +19,7 @@ canvas.width = 100 * 16;
 canvas.height = 100 * 9;
 
 const player = new Player({
-    collisionBlocks
+    collisionBlocks: collisionBlocks
 })
 
 // Create damageBlock
