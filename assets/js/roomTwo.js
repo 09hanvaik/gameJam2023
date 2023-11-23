@@ -31,7 +31,7 @@ var strike = 0
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
-    backgroundLevelMain.draw();
+    backgroundLevel2.draw();
 
     //Player moving
     player.velocity.x = 0
@@ -91,10 +91,6 @@ function animate() {
         emptyHeart2.draw()
         emptyHeart3.draw()
         // game over
-    }
-
-    if (player.position.x == 1000){
-        window.location.href = "roomOne.html";
     }
 }
 animate();
