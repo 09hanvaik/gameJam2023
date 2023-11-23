@@ -16,7 +16,7 @@ const key = {
 
 // aspect ratio 16:9 & Background (1920x1080 Pixel Ratio)
 canvas.width = 120 * 16;
-canvas.height = 67.5 * 9;
+canvas.height = 120 * 9;
 
 const player = new Player({
     collisionBlocks: collisionBlocks
@@ -34,6 +34,7 @@ function animate() {
     window.requestAnimationFrame(animate);
     //Background
     backgroundLevelMain.draw();
+
 
     //Player moving
     player.velocity.x = 0
@@ -95,10 +96,15 @@ function animate() {
         // game over
     }
 
-    if (player.position.x == 1000){
+    // Need to move this somewhere else but placeholder for now
+    controlsDisplay.draw()
+
+    
+     if (player.position.x == 1000){
         window.location.href = "roomOne.html";
     }
 }
+
 animate();
 
 
