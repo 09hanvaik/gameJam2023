@@ -32,6 +32,9 @@ function animate() {
     window.requestAnimationFrame(animate);
     //Background
     backgroundLevel1.draw();
+    collisionBlocks.forEach((collisionBlock) => {
+        collision.draw()
+    })
 
     //Player moving
     player.velocity.x = 0

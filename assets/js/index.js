@@ -15,8 +15,8 @@ const key = {
 }
 
 // aspect ratio 16:9 & Background (1920x1080 Pixel Ratio)
-canvas.width = 120 * 16;
-canvas.height = 67.5 * 9;
+canvas.width = 64 * 16;
+canvas.height = 64 * 9;
 
 const player = new Player({
     collisionBlocks: collisionBlocks
@@ -34,6 +34,9 @@ function animate() {
     window.requestAnimationFrame(animate);
     //Background
     backgroundLevelMain.draw();
+    // collisionBlocks.forEach((collisionBlock) => {
+    //     collision.draw()
+    // })
 
     //Player moving
     player.velocity.x = 0

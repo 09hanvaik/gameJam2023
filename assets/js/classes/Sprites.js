@@ -1,4 +1,3 @@
-// Background
 
 class icon {
     constructor({ position, imageSrc, height, width }) {
