@@ -102,7 +102,16 @@ function animate() {
         emptyHeart3.draw()
         // game over
     }
+
+    // Need to move this somewhere else but placeholder for now
+    controlsDisplay.draw()
+
+    
+     if (player.position.x == 1000){
+        window.location.href = "roomOne.html";
+    }
 }
+
 animate();
 
 
