@@ -14,9 +14,13 @@ const key = {
     }
 }
 
-// aspect ratio 16:9 & Background (1920x1080 Pixel Ratio)
-canvas.width = 120 * 16;
-canvas.height = 120 * 9;
+// aspect ratio 16:9 & Background (1600x900 Pixel Ratio)
+canvas.width = 64 * 16;
+canvas.height = 64 * 9;
+
+// collision blocks
+const parsedCollisions = collisionsLevel1.parse2D()
+const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
 const player = new Player({
     collisionBlocks: collisionBlocks
@@ -33,8 +37,11 @@ var strike = 0
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
-    backgroundLevelMain.draw();
-
+    backgroundLevel1.draw();
+    //Collision Blocks for Level
+    collisionBlocks.forEach(CollisionBlock => {
+        CollisionBlock.draw()
+    })
 
     //Player moving
     player.velocity.x = 0

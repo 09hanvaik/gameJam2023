@@ -28,4 +28,3 @@ const controlsDisplay = new controls({
     width: 300,
     imageSrc: "assets/img/controls.png",
 })
-
