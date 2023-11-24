@@ -1,7 +1,22 @@
 // Variables
-
 const canvas = document.querySelector("canvas")
 const c = canvas.getContext("2d")
+
+// aspect ratio 16:9 & Background 
+canvas.width = 64 * 16;
+canvas.height = 64 * 9;
+
+// collision blocks
+const parsedCollisions = collisionsLevel1.parse2D()
+const collisionBlocks = parsedCollisions.createObjectsFrom2D()
+
+// Player
+const player = new Player({
+    collisionBlocks,
+    imageSrc: "assets/sprites_animations/girl/girlForwardIdle.png"
+})
+
+// Keys
 const key = {
     w: {
         pressed: false,
@@ -13,18 +28,6 @@ const key = {
         pressed: false,
     }
 }
-
-// aspect ratio 16:9 & Background (1600x900 Pixel Ratio)
-canvas.width = 64 * 16;
-canvas.height = 64 * 9;
-
-// collision blocks
-const parsedCollisions = collisionsLevel1.parse2D()
-const collisionBlocks = parsedCollisions.createObjectsFrom2D()
-
-const player = new Player({
-    collisionBlocks: collisionBlocks
-})
 
 // Create damageBlock
 const damageBlock = new DamageBlock();
