@@ -14,9 +14,19 @@ const key = {
     }
 }
 
+<<<<<<< HEAD
 // aspect ratio 16:9 & Background (1920x1080 Pixel Ratio)
 canvas.width = 64 * 16;
 canvas.height = 64 * 9;
+=======
+// aspect ratio 16:9 & Background (1600x900 Pixel Ratio)
+canvas.width = 64 * 16;
+canvas.height = 64 * 9;
+
+// collision blocks
+const parsedCollisions = collisionsLevel1.parse2D()
+const collisionBlocks = parsedCollisions.createObjectsFrom2D()
+>>>>>>> ecf12c0160c198b63f299c415ec86445286ff481
 
 const player = new Player({
     collisionBlocks: collisionBlocks
@@ -33,10 +43,18 @@ var strike = 0
 function animate() {
     window.requestAnimationFrame(animate);
     //Background
+<<<<<<< HEAD
     backgroundLevelMain.draw();
     // collisionBlocks.forEach((collisionBlock) => {
     //     collision.draw()
     // })
+=======
+    backgroundLevel1.draw();
+    //Collision Blocks for Level
+    collisionBlocks.forEach(CollisionBlock => {
+        CollisionBlock.draw()
+    })
+>>>>>>> ecf12c0160c198b63f299c415ec86445286ff481
 
     //Player moving
     player.velocity.x = 0
@@ -98,10 +116,15 @@ function animate() {
         // game over
     }
 
-    if (player.position.x == 1000){
+    // Need to move this somewhere else but placeholder for now
+    controlsDisplay.draw()
+
+    
+     if (player.position.x == 1000){
         window.location.href = "roomOne.html";
     }
 }
+
 animate();
 
 

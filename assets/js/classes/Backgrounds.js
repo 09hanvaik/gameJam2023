@@ -39,3 +39,7 @@ const backgroundLevel2 = new Background ({
     },
     imageSrc: "assets/img/Level1_Room2.png"
 })
+
+function removeControls() {
+    backgroundLevelMain.draw()
+}

@@ -12,8 +12,8 @@ class DamageBlock {
         }
         
         this.gravity = 1
-        this.width = 100
-        this.height = 100
+        this.width = 32
+        this.height = 32
         this.sides = {
             bottom: this.position.y + this.height
         }
