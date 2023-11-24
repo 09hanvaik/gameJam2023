@@ -1,7 +1,7 @@
 class Player extends Sprite {
     // Values and Variables
-    constructor({ collisionBlocks = [], imageSrc }) {
-        super({ imageSrc })
+    constructor({ collisionBlocks = [], imageSrc, frameRate }) {
+        super({ imageSrc, frameRate })
         this.position = {
             x: 200,
             y: 200,
@@ -31,8 +31,9 @@ class Player extends Sprite {
 
     // Gravity & Velocity
     update() {
-        c.fillStyle = 'blue'
-        c.fillRect(this.position.x, this.position.y, this.width, this.height)
+        // this is the Blue Box (to check player collision)
+        // c.fillStyle = 'rgba(0, 0, 255, 0.5'
+        // c.fillRect(this.position.x, this.position.y, this.width, this.height)
         this.position.x += this.velocity.x
         
         this.checkForHorizontalCollisions()

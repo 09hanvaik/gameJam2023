@@ -13,7 +13,8 @@ const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 // Player
 const player = new Player({
     collisionBlocks,
-    imageSrc: "assets/sprites_animations/girl/girlForwardIdle.png"
+    imageSrc: "assets/sprites_animations/girl/girlForwardIdle.png",
+    frameRate: 6,
 })
 
 // Keys
