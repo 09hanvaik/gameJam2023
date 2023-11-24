@@ -29,7 +29,7 @@ const backgroundLevel1 = new Background ({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/Level1_Room1.png"
+    imageSrc: "assets/img/emma-test-map.png"
 })
 
 const backgroundLevel2 = new Background ({

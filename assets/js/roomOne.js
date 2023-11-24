@@ -28,10 +28,20 @@
 // var strike = 0
 
 
+<<<<<<< HEAD
+function animate() {
+    window.requestAnimationFrame(animate);
+    //Background
+    backgroundLevel1.draw();
+    collisionBlocks.forEach((collisionBlock) => {
+        collision.draw()
+    })
+=======
 // function animate() {
 //     window.requestAnimationFrame(animate);
 //     //Background
 //     backgroundLevel1.draw();
+>>>>>>> ecf12c0160c198b63f299c415ec86445286ff481
 
 //     //Player moving
 //     player.velocity.x = 0
