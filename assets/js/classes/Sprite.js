@@ -1,5 +1,4 @@
 // Background
-
 class Sprite {
     constructor({ position, imageSrc }) {
         this.position = position
@@ -16,6 +15,7 @@ class Sprite {
     }
 }
 
+// Level Images
 const backgroundLevel1 = new Sprite({
     position: {
         x: 0,
