@@ -14,8 +14,8 @@ class Player {
         }
         
         this.gravity = 1
-        this.width = 100
-        this.height = 100
+        this.width = 16
+        this.height = 26
         this.sides = {
             bottom: this.position.y + this.height,
         }

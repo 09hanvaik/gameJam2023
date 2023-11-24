@@ -21,5 +21,5 @@ const backgroundLevel1 = new Sprite({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/2_game_background.png"
+    imageSrc: "assets/img/room1.png"
 })
