@@ -6,7 +6,7 @@ window.addEventListener("keydown", (event) => {
         case "w":
             if (player.velocity.y === 0) {
                 canDoubleJump = true
-                player.velocity.y = -20
+                player.velocity.y = -9
             // } else {
             //     if (canDoubleJump == true) {
             //         canDoubleJump = false

@@ -13,7 +13,7 @@ Array.prototype.parse2D = function() {
         const objects = []
         this.forEach((row, y) => {
             row.forEach((symbol, x) => {
-                if (symbol === 26) {
+                if (symbol === 576) {
                     // push a new collision into collisionblocks array
                     objects.push(
                         new CollisionBlock({
