@@ -19,7 +19,7 @@ canvas.width = 64 * 16;
 canvas.height = 64 * 9;
 
 // collision blocks
-const parsedCollisions = collisionsLevel1.parse2D()
+const parsedCollisions = mainRoomCollisions.parse2D()
 const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
 const player = new Player({

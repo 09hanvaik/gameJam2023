@@ -21,7 +21,7 @@ const backgroundLevel1 = new Sprite({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/room1.png"
+    imageSrc: "assets/img/mainRoom.png"
 })
 
 class icon {

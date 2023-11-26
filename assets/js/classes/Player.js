@@ -5,7 +5,7 @@ class Player {
     }) {
         this.position = {
             x: 200,
-            y: 200,
+            y: 400,
         }
 
         this.velocity = {
@@ -13,8 +13,8 @@ class Player {
             y: 0
         }
         
-        this.width = 16
-        this.height = 26
+        this.width = 14
+        this.height = 28
         this.sides = {
             bottom: this.position.y + this.height,
         }

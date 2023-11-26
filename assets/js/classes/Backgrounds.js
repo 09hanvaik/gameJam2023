@@ -29,7 +29,7 @@ const backgroundLevel1 = new Background ({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/emma-test-map.png"
+    imageSrc: "assets/img/room1.png"
 })
 
 const backgroundLevel2 = new Background ({
@@ -37,7 +37,7 @@ const backgroundLevel2 = new Background ({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/Level1_Room2.png"
+    imageSrc: "assets/img/room2.png"
 })
 
 function removeControls() {
