@@ -7,11 +7,11 @@ window.addEventListener("keydown", (event) => {
             if (player.velocity.y === 0) {
                 canDoubleJump = true
                 player.velocity.y = -9
-            // } else {
-            //     if (canDoubleJump == true) {
-            //         canDoubleJump = false
-            //         player.velocity.y = -10
-            //     }
+             } else {
+                 if (canDoubleJump == true) {
+                     canDoubleJump = false
+                     player.velocity.y = -9
+                }
             }            
         break;
 

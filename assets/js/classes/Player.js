@@ -2,17 +2,17 @@ class Player {
     // Values and Variables
     constructor({
       collisionBlocks = []  
-    }) {
+    }) { //player spawn position (needs to be fixed to change dynamically per level)
         this.position = {
             x: 200,
-            y: 400,
+            y: 220,
         }
 
         this.velocity = {
             x: 0,
-            y: 0
+            y: 0,
         }
-        
+        // Height and width of player (will change during sprite animations)
         this.width = 14
         this.height = 28
         this.sides = {
@@ -24,7 +24,7 @@ class Player {
         this.collisionBlocks = collisionBlocks
     }
 
-    // Player Looks
+    // Player Looks (temp)
     draw() {
         c.fillStyle = "red" 
         c.fillRect(this.position.x, this.position.y, this.width, this.height);
@@ -37,13 +37,10 @@ class Player {
         this.checkForHorizontalCollisions()
         this.applyGravity()
         this.checkForVerticalCollisions()
-
-        // Keeps player above bottom of canvas
-        // if (this.sides.bottom + this.velocity.y < canvas.height) {
-        //     this.position.y++;
-        // } else this.velocity.y = 0
     }      
     
+    // Player Collisions and Gravity on Player 
+    // Horizontal Collisions
     checkForHorizontalCollisions() {
         for (let i = 0; i < this.collisionBlocks.length; i++) {
             const collisionBlock = this.collisionBlocks[i]
@@ -67,12 +64,14 @@ class Player {
                 }
             }
         }}
-
+    
+    // Gravity
     applyGravity() {
         this.velocity.y += this.gravity
         this.position.y += this.velocity.y
     }
 
+    // Vertical Collisions
     checkForVerticalCollisions () {
         for (let i = 0; i < this.collisionBlocks.length; i++) {
             const collisionBlock = this.collisionBlocks[i]

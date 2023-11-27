@@ -16,12 +16,13 @@ class Background {
     }
 }
 
+// this code does not work
 const backgroundLevelMain = new Background ({
         position: {
             x: 0,
             y: 0,
         },
-        imageSrc: "assets/img/2_game_background.png"
+        imageSrc: "assets/img/mainRoom.png"
     })
 
 const backgroundLevel1 = new Background ({

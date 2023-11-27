@@ -1,4 +1,4 @@
-// Background
+// Sprite Class
 class Sprite {
     constructor({ position, imageSrc }) {
         this.position = position
@@ -21,9 +21,10 @@ const backgroundLevel1 = new Sprite({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/mainRoom.png"
+    imageSrc: "assets/img/room2.png" // current background image is set here
 })
 
+// Icon Class (for health bar)
 class icon {
     constructor({ position, imageSrc, height, width }) {
         this.position = position
