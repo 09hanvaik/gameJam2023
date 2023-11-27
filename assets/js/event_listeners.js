@@ -7,23 +7,23 @@ window.addEventListener("keydown", (event) => {
             if (player.velocity.y === 0) {
                 canDoubleJump = true
                 player.velocity.y = -9
-             } else {
-                 if (canDoubleJump == true) {
-                     canDoubleJump = false
-                     player.velocity.y = -9
+            } else {
+                if (canDoubleJump == true) {
+                    canDoubleJump = false
+                    player.velocity.y = -9
                 }
-            }            
-        break;
+            }
+            break;
 
         // Left
         case "a":
             key.a.pressed = true
-        break
+            break
 
         // Right
         case "d":
             key.d.pressed = true
-        break
+            break
     }
 })
 
@@ -32,11 +32,11 @@ window.addEventListener("keyup", (event) => {
         // Left
         case "a":
             key.a.pressed = false
-        break
+            break
 
         // Right
         case "d":
             key.d.pressed = false
-        break
+            break
     }
 })
