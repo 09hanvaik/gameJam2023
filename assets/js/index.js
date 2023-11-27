@@ -77,6 +77,23 @@ const player = new Player({
     },
 })
 
+// Doors for Levels
+const doors = [
+    new Sprite ({
+        position: {
+            x: 0,
+            y: 0,
+        },
+        imageSrc: "assets/img/sprites_animations/doorOpeningAnimation-Sheet.png",
+        frameRate: 5,
+        frameBuffer: 5,
+        loop: false,
+    }),
+
+]
+
+
+
 // Create damageBlock
 const damageBlock = new DamageBlock();
 var spawnBlock = false
@@ -92,6 +109,10 @@ function animate() {
     //Collision Blocks for Level
     collisionBlocks.forEach(CollisionBlock => {
         CollisionBlock.draw()
+    })
+    // Door SpriteSheet for Level
+    doors.forEach((door) => {
+        door.draw()
     })
 
     //Player moving // code for spite switching (run/idle/jump)
