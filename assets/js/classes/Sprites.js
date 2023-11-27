@@ -15,7 +15,7 @@ class Sprite {
         this.frameRate = frameRate
         this.currentFrame = 0
         this.elapsedFrames = 0 // keeps increasing over time
-        this.frameBuffer = 2 // buffer so frames repeat
+        this.frameBuffer = 2 // buffer so frames repeat // affect how fast animation runs
         
         // animations argument (holds all this information for the sprite)
         this.animations = animations

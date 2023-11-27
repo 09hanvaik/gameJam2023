@@ -18,7 +18,7 @@ canvas.width = 64 * 16;
 canvas.height = 64 * 9;
 
 // collision blocks
-const parsedCollisions = collisionsLevel2.parse2D() //set to the singular room its on currently
+const parsedCollisions = collisionsLevel2.parse2D() //set to the singular room its on currently // info from utils.js
 const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
 // Background
@@ -51,19 +51,19 @@ const player = new Player({
         },
         runRight: {
             frameRate: 14,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: "assets/img/sprites_animations/girlRunRight.png",
         },
         runLeft: {
             frameRate: 14,
-            frameBuffer: 2,
+            frameBuffer: 3,
             loop: true,
             imageSrc: "assets/img/sprites_animations/girlRunLeft.png",
         },
         jumpRight: {
             frameRate: 8,
-            frameBuffer: 2,
+            frameBuffer: 4,
             loop: true,
             imageSrc: "assets/img/sprites_animations/girlJumpRight.png",
         },
@@ -95,13 +95,23 @@ function animate() {
     })
 
     //Player moving // code for spite switching (run/idle/jump)
-    // this needs some adjustment - player absolutely zooms
+    // this might need some adjustment - lower number is slower player moves right/left
     player.velocity.x = 0
     if (key.d.pressed) {
         player.switchSprite('runRight')
-        player.velocity.x = 4
-    } else if (key.a.pressed)
-        player.velocity.x = -4
+        player.velocity.x = 2.5
+        player.lastDirection = 'right'
+    } else if (key.a.pressed) {
+        player.switchSprite('runLeft')
+        player.velocity.x = -2.5
+        player.lastDirection = 'left'
+    } else if (key.w.pressed) {
+        player.switchSprite('jumpRight') // not actually sure jump animation is working - very hard to see
+        player.lastDirection = 'right'
+    } else {
+        if (player.lastDirection === 'left') player.switchSprite('idleLeft')
+        else player.switchSprite('idleRight')
+    }
 
     player.draw()
     player.update()

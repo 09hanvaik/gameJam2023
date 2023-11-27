@@ -39,6 +39,7 @@ class Player extends Sprite {
 
     // SwitchSprite Method
     switchSprite(name) {
+        if (this.image === this.animations[name].image) return
         this.currentFrame = 0
         this.image = this.animations[name].image
         this.frameRate = this.animations[name].frameRate
