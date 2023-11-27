@@ -1,7 +1,7 @@
 class Player extends Sprite {
     // Values and Variables
-    constructor({ collisionBlocks = [], imageSrc, frameRate }) { //player spawn position (needs to be fixed to change dynamically per level)
-        super({ imageSrc, frameRate })
+    constructor({ collisionBlocks = [], imageSrc, frameRate, animations }) { //player spawn position (needs to be fixed to change dynamically per level)
+        super({ imageSrc, frameRate, animations })
         this.position = {
             x: 200,
             y: 200,
@@ -36,6 +36,16 @@ class Player extends Sprite {
         this.applyGravity()
         this.checkForVerticalCollisions()
     }
+
+    // SwitchSprite Method
+    switchSprite(name) {
+        if (this.image === this.animations[name].image) return
+        this.currentFrame = 0
+        this.image = this.animations[name].image
+        this.frameRate = this.animations[name].frameRate
+        this.frameBuffer = this.animations[name].frameBuffer
+    }
+
 
     // Player Collisions and Gravity on Player 
     // Horizontal Collisions

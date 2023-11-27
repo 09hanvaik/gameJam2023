@@ -1,6 +1,6 @@
 // Sprite Class
 class Sprite {
-    constructor({ position, imageSrc, frameRate = 1 }) {
+    constructor({ position, imageSrc, frameRate = 1, animations }) {
         this.position = position
         this.image = new Image()
         this.image.onload = () => {
@@ -15,8 +15,26 @@ class Sprite {
         this.frameRate = frameRate
         this.currentFrame = 0
         this.elapsedFrames = 0 // keeps increasing over time
-        this.frameBuffer = 2 // buffer so frames repeat
+        this.frameBuffer = 2 // buffer so frames repeat // affect how fast animation runs
+        
+        // animations argument (holds all this information for the sprite)
+        this.animations = animations
+
+        //this loop goes through all the different sprite sheets so you can
+        //switch between animations for the player using a key to refer to the sheet
+        // is stored in index.js
+        if (this.animations) {
+            for (let key in this.animations) {
+                const image = new Image()
+                image.src = this.animations[key].imageSrc
+                this.animations[key].image = image
+            } 
+
+            // checking this worked correctly
+            // console.log(this.animations)
+        }
     }
+    
     draw() {
         if (!this.loaded) return
         // Sprite Animations - Cropbox for Sprite Sheet
