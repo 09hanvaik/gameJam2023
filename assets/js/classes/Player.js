@@ -1,55 +1,53 @@
-class Player {
+class Player extends Sprite {
     // Values and Variables
-    constructor({
-      collisionBlocks = []  
-    }) { //player spawn position (needs to be fixed to change dynamically per level)
+    constructor({ collisionBlocks = [], imageSrc, frameRate }) { //player spawn position (needs to be fixed to change dynamically per level)
+        super({ imageSrc, frameRate })
         this.position = {
             x: 200,
-            y: 220,
+            y: 200,
         }
 
         this.velocity = {
             x: 0,
             y: 0,
         }
-        // Height and width of player (will change during sprite animations)
-        this.width = 14
-        this.height = 28
+        // Height and width of player (will change during sprite animations are not set in Sprite class)
         this.sides = {
             bottom: this.position.y + this.height,
         }
         this.gravity = 1
-        
+
         // Collision Blocks
         this.collisionBlocks = collisionBlocks
     }
 
     // Player Looks (temp)
-    draw() {
-        c.fillStyle = "red" 
-        c.fillRect(this.position.x, this.position.y, this.width, this.height);
-    }
+    // draw() {
+    //     c.fillStyle = "red" 
+    //     c.fillRect(this.position.x, this.position.y, this.width, this.height);
+    // }
 
     // Gravity & Velocity
     update() {
+
         this.position.x += this.velocity.x
-        
+
         this.checkForHorizontalCollisions()
         this.applyGravity()
         this.checkForVerticalCollisions()
-    }      
-    
+    }
+
     // Player Collisions and Gravity on Player 
     // Horizontal Collisions
     checkForHorizontalCollisions() {
         for (let i = 0; i < this.collisionBlocks.length; i++) {
             const collisionBlock = this.collisionBlocks[i]
-        
-        //if a collision exists
-        if (this.position.x <= collisionBlock.position.x + collisionBlock.width &&
-            this.position.x + this.width >= collisionBlock.position.x &&
-            this.position.y + this.height >= collisionBlock.position.y &&
-            this.position.y <= collisionBlock.position.y + collisionBlock.height
+
+            //if a collision exists
+            if (this.position.x <= collisionBlock.position.x + collisionBlock.width &&
+                this.position.x + this.width >= collisionBlock.position.x &&
+                this.position.y + this.height >= collisionBlock.position.y &&
+                this.position.y <= collisionBlock.position.y + collisionBlock.height
             ) {
                 // collision on x axis (left)
                 if (this.velocity.x < 0) {
@@ -63,8 +61,9 @@ class Player {
                     break
                 }
             }
-        }}
-    
+        }
+    }
+
     // Gravity
     applyGravity() {
         this.velocity.y += this.gravity
@@ -72,15 +71,15 @@ class Player {
     }
 
     // Vertical Collisions
-    checkForVerticalCollisions () {
+    checkForVerticalCollisions() {
         for (let i = 0; i < this.collisionBlocks.length; i++) {
             const collisionBlock = this.collisionBlocks[i]
 
-        //if a collision exists
-        if (this.position.x <= collisionBlock.position.x + collisionBlock.width &&
-            this.position.x + this.width >= collisionBlock.position.x &&
-            this.position.y + this.height >= collisionBlock.position.y &&
-            this.position.y <= collisionBlock.position.y + collisionBlock.height
+            //if a collision exists
+            if (this.position.x <= collisionBlock.position.x + collisionBlock.width &&
+                this.position.x + this.width >= collisionBlock.position.x &&
+                this.position.y + this.height >= collisionBlock.position.y &&
+                this.position.y <= collisionBlock.position.y + collisionBlock.height
             ) {
                 // collision on y axis (up)
                 if (this.velocity.y < 0) {

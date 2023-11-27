@@ -1,5 +1,4 @@
 // Variables
-
 const canvas = document.querySelector("canvas")
 const c = canvas.getContext("2d")
 const key = {
@@ -22,8 +21,21 @@ canvas.height = 64 * 9;
 const parsedCollisions = collisionsLevel2.parse2D() //set to the singular room its on currently
 const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
+// Background
+// Level Images (for now)
+const backgroundLevel1 = new Sprite({
+    position: {
+        x: 0,
+        y: 0,
+    },
+    imageSrc: "assets/img/room2.png" // current background image is set here
+})
+
+// Player Created
 const player = new Player({
-    collisionBlocks: collisionBlocks
+    collisionBlocks,
+    imageSrc: "assets/img/sprites_animations/girlIdleRight.png",
+    frameRate: 7,
 })
 
 // Create damageBlock
@@ -104,12 +116,16 @@ function animate() {
     }
 
     // Need to move this somewhere else but placeholder for now
-    controlsDisplay.draw()
 
-    
-     if (player.position.x == 1000){
-        window.location.href = "roomOne.html";
-    }
+    // creates an error when animating sprites so commenting out for now, not sure what
+    // is happening with this code 
+    //     controlsDisplay.draw()
+
+
+    //      if (player.position.x == 1000){
+    //         window.location.href = "roomOne.html";
+    //     }
+
 }
 
 animate();

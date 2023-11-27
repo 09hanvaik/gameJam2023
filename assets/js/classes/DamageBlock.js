@@ -1,3 +1,5 @@
+// Damage Block Class
+
 class DamageBlock {
     // Values and Variables
     constructor() {
@@ -10,7 +12,7 @@ class DamageBlock {
             x: 0,
             y: 0
         }
-        
+
         this.gravity = 1
         this.width = 32
         this.height = 32
@@ -21,7 +23,7 @@ class DamageBlock {
 
     // DamageBlock Looks
     draw() {
-        c.fillStyle = "blue" 
+        c.fillStyle = "blue"
         c.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 
@@ -35,7 +37,7 @@ class DamageBlock {
         if (this.sides.bottom + this.velocity.y < canvas.height) {
             this.velocity.y += this.gravity
             this.position.y++;
-            
+
         } else this.velocity.y = 0
     }
 }
