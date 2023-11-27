@@ -19,7 +19,7 @@ canvas.width = 64 * 16;
 canvas.height = 64 * 9;
 
 // collision blocks
-const parsedCollisions = mainRoomCollisions.parse2D()
+const parsedCollisions = collisionsLevel2.parse2D() //set to the singular room its on currently
 const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
 const player = new Player({

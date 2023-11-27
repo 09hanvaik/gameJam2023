@@ -1,4 +1,4 @@
-// // Background
+// Commented this out so I count see if the collision blocks were working
 
 // class controls {
 //     constructor({ position, imageSrc, height, width }) {

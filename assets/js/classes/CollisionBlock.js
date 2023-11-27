@@ -1,51 +1,13 @@
+// Collision Blocks
 class CollisionBlock {
     constructor({position}) {
         this.position = position
         this.width = 16
-        this.height = 16
+        this.height = 16 // blocks are 16 x 16 pixels
     }
 
-    draw() {
+    draw() { // this is show collision blocks on screen (temporary to check if collision block code works)
     c.fillStyle = 'rgba(255, 0, 0, 0.5)'
     c.fillRect(this.position.x, this.position.y, this.width, this.height)
     }
 }
-
-// Array.prototype.parse2D = function(){
-//     const rows = []
-//     for (let i=0; i < this.length; i += 16) {
-//         rows.push(this.slice (i, i + 16))
-//     }
-//     return rows
-// }
-
-// class CollisionBlock {
-//     constructor({position}){
-//         this.position = position
-//         this.width = 64
-//         this.height = 64
-//     }
-
-//     draw() {
-//         c.fillStyle = 'red'
-//         c.fillRect(this.position.x, this.position.y, this.width, this.height)
-//     }
-// }
-
-// const collisionBlocks = []
-
-// const parsedCollisions = collisionsLevel1.parse2D()
-// parsedCollisions.forEach((row, y) => {
-//     row.forEach((symbol, x) => {
-//     if (symbol===26) {
-//         collisionBlocks.push(
-//         new CollisionBlock({
-//         position: {
-//             x: x * 64,
-//             y: y * 64,
-//         },
-//     })
-//     )
-//     }
-// })
-// })
