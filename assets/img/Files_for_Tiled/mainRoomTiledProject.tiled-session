@@ -1,0 +1,53 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Tiled_Maps/Emma-Test.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tiled_Maps/emma-test-map.tmx": {
+            "scale": 1.0027777777777778,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 510.58171745152356,
+                "y": 253.29639889196673
+            }
+        },
+        "Tiled_Maps/emma-test-map2.tmx": {
+            "scale": 1.0027777777777778,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 510.58171745152356,
+                "y": 295.18005540166206
+            }
+        },
+        "Tiled_Maps/emma-test-map3.tmx": {
+            "scale": 1.246875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 512.4812030075188,
+                "y": 288.72180451127815
+            }
+        },
+        "Tiled_Maps/emma-test2.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/emmab/gameJam2023/assets/img/Files_for_Tiled/rawCollisionsData",
+    "last.externalTilesetPath": "C:/Users/emmab/gameJam2023/assets/img/Files_for_Tiled/Tiled_Maps",
+    "last.imagePath": "C:/Users/emmab/gameJam2023/assets/img/Files_for_Tiled/sprites_tile_sheets",
+    "map.lastUsedExportFilter": "JavaScript map files (*.js)",
+    "openFiles": [
+    ],
+    "project": "mainRoomTiledProject.tiled-project",
+    "recentFiles": [
+        "Tiled_Maps/emma-test-map3.tmx",
+        "Tiled_Maps/emma-test-map.tmx",
+        "Tiled_Maps/emma-test2.tsx",
+        "Tiled_Maps/Emma-Test.tsx"
+    ]
+}
