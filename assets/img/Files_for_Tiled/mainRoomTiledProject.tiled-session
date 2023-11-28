@@ -89,11 +89,11 @@
             "scaleInEditor": 1
         },
         "Tiled_Maps/main room map.tmx": {
-            "scale": 0.57890625,
-            "selectedLayer": 0,
+            "scale": 1,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 1133.1713900134953,
-                "y": 488.8529014844804
+                "x": 593,
+                "y": 398
             }
         },
         "Tiled_Maps/room1TiledMapEdit.tmx": {
@@ -106,10 +106,10 @@
         },
         "Tiled_Maps/room2TiledMapEdit.tmx": {
             "scale": 1.246875,
-            "selectedLayer": 0,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 222.9573934837093,
-                "y": 194.4862155388471
+                "x": 510.8771929824562,
+                "y": 287.9197994987469
             }
         },
         "Tiled_Maps/tiled maps/Emma-Test.tsx": {
