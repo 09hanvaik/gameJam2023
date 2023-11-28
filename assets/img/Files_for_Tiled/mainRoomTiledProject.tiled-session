@@ -1,6 +1,8 @@
 {
-    "activeFile": "",
+    "activeFile": "Tiled_Maps/main room map.tmx",
     "expandedProjectPaths": [
+        ".",
+        "Tiled_Maps"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -47,14 +49,14 @@
             "scaleInDock": 1
         },
         "Tiled_Maps/Emma-Test.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Tiled_Maps/animations/largerSpriteSheetUPDATEt.tsx": {
             "scaleInDock": 1
         },
         "Tiled_Maps/dragon.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Tiled_Maps/emma-test-map.tmx": {
@@ -82,10 +84,11 @@
             }
         },
         "Tiled_Maps/emma-test2.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Tiled_Maps/largerSpriteSheetUPDATEt.tsx": {
+            "scaleInDock": 3,
             "scaleInEditor": 1
         },
         "Tiled_Maps/main room map.tmx": {
@@ -98,7 +101,7 @@
         },
         "Tiled_Maps/room1TiledMapEdit.tmx": {
             "scale": 1.246875,
-            "selectedLayer": 0,
+            "selectedLayer": 7,
             "viewCenter": {
                 "x": 512.4812030075188,
                 "y": 287.9197994987469
@@ -124,7 +127,7 @@
             "scaleInDock": 1
         },
         "Tiled_Maps/windows-and-vines-sprite-sheet.tsx": {
-            "scaleInDock": 1,
+            "scaleInDock": 3,
             "scaleInEditor": 1
         }
     },
@@ -133,9 +136,15 @@
     "last.imagePath": "C:/Users/emmab/gameJam2023/assets/img/Files_for_Tiled/sprites_tile_sheets",
     "map.lastUsedExportFilter": "JavaScript map files (*.js)",
     "openFiles": [
+        "Tiled_Maps/room1TiledMapEdit.tmx",
+        "Tiled_Maps/room2TiledMapEdit.tmx",
+        "Tiled_Maps/main room map.tmx"
     ],
     "project": "mainRoomTiledProject.tiled-project",
     "recentFiles": [
+        "Tiled_Maps/room1TiledMapEdit.tmx",
+        "Tiled_Maps/room2TiledMapEdit.tmx",
+        "Tiled_Maps/main room map.tmx",
         "Tiled_Maps/largerSpriteSheetUPDATEt.tsx",
         "Tiled_Maps/windows-and-vines-sprite-sheet.tsx",
         "Tiled_Maps/dragon.tsx",
@@ -144,9 +153,7 @@
         "C:/Users/emmab/Desktop/tiled maps/emma-test-map3.tmx",
         "Tiled_Maps/emma-test-map3.tmx",
         "Tiled_Maps/emma-test-map2.tmx",
-        "Tiled_Maps/emma-test-map.tmx",
-        "Tiled_Maps/emma-test2.tsx",
-        "Tiled_Maps/Emma-Test.tsx"
+        "Tiled_Maps/emma-test-map.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
