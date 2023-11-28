@@ -101,9 +101,15 @@ var spawnBlock = false
 // damage counter
 var strike = 0
 
+//FPS
+const fps = 60;
 
 function animate() {
-    window.requestAnimationFrame(animate);
+    setTimeout(() => {
+        window.requestAnimationFrame(animate);
+      }, 1000 / fps);
+    
+    
     //Background
     backgroundLevel1.draw()
     //Collision Blocks for Level
