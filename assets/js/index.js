@@ -39,13 +39,13 @@ const player = new Player({
     animations: {
         idleRight: {
             frameRate: 7,
-            frameBuffer: 2,
+            frameBuffer: 4,
             loop: true,
             imageSrc: "assets/img/sprites_animations/girlIdleRight.png",
         },
         idleLeft: {
             frameRate: 7,
-            frameBuffer: 2,
+            frameBuffer: 4,
             loop: true,
             imageSrc: "assets/img/sprites_animations/girlIdleLeft.png",
         },
