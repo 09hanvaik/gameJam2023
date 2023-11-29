@@ -18,7 +18,7 @@ canvas.width = 64 * 16;
 canvas.height = 64 * 9;
 
 // collision blocks
-const parsedCollisions = collisionsLevel2.parse2D() //set to the singular room its on currently // info from utils.js
+const parsedCollisions = mainRoomCollisions.parse2D() //set to the singular room its on currently // info from utils.js
 const collisionBlocks = parsedCollisions.createObjectsFrom2D()
 
 // Background
@@ -28,7 +28,7 @@ const backgroundLevel1 = new Sprite({
         x: 0,
         y: 0,
     },
-    imageSrc: "assets/img/room2.png" // current background image is set here
+    imageSrc: "assets/img/mainRoom.png" // current background image is set here
 })
 
 // Player Created & Animations for that Player Stored
