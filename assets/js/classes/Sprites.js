@@ -7,6 +7,7 @@ class Sprite {
         animations, 
         frameBuffer = 2,
         loop = true,
+        autoplay = true,
     }) {
 
         this.position = position
@@ -24,7 +25,7 @@ class Sprite {
         this.currentFrame = 0
         this.elapsedFrames = 0 // keeps increasing over time
         this.frameBuffer = frameBuffer // buffer so frames repeat // affect how fast animation runs
-        
+        this.autoplay = autoplay
         // animations argument (holds all this information for the sprite)
         this.animations = animations
         this.loop = loop
@@ -73,8 +74,14 @@ class Sprite {
         this.updateFrames()
     }
 
+    play(){
+        this.autoplay = true
+    }
+    
     // function to crop spritesheets for animations
     updateFrames() {
+        if (!this.autoplay) return
+
         this.elapsedFrames++
 
         if (this.elapsedFrames % this.frameBuffer === 0) {

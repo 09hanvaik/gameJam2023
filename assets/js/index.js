@@ -11,6 +11,7 @@ const key = {
     d: {
         pressed: false,
     }
+
 }
 
 // aspect ratio 16:9 & Background (1024x579 Pixel Ratio) // please do not change this for now
@@ -74,6 +75,13 @@ const player = new Player({
         //     loop: true,
         //     imageSrc: "assets/img/sprites_animations/girlJumpLeft.png",
         // },
+        //We don't have entering door animation for sprite
+        // enterDoor: {
+        //     frameRate: 8,
+        //     frameBuffer: 4,
+        //     loop: false,
+        //     imageSrc: "assets/img/sprites_animations/girlJumpRight.png",
+        // },
     },
 })
 
@@ -81,13 +89,14 @@ const player = new Player({
 const doors = [
     new Sprite ({
         position: {
-            x: 0,
-            y: 0,
+            x: 430,
+            y: 418,
         },
         imageSrc: "assets/img/sprites_animations/doorOpeningAnimation-Sheet.png",
         frameRate: 5,
         frameBuffer: 5,
         loop: false,
+        autoplay: false,
     }),
 
 ]
@@ -140,8 +149,11 @@ function animate() {
         else player.switchSprite('idleRight')
     }
 
+
     player.draw()
     player.update()
+
+    
 }
 // when player goes under spawn point damageBlock falls
 // if timer is less than AMOUNT then spawning function happens 
@@ -160,19 +172,8 @@ if (spawnBlock === true) {
     damageBlock.update();
 }
 
-// ---------- Collisions -------------
-// !!! NOT WORKING !!! Does not cause errors, for now illustrates concept, replace later
 
-// player and damage box overlap
-// if (player.position.x < damageBlock.position.x + damageBlock.width &&
-//     player.position.x + player.width > damageBlock.position.x &&
-//     player.position.y < damageBlock.position.y + damageBlock.height &&
-//     player.position.y + player.height > damageBlock.y) {
-//         collision detected
-//         strike = strike++;
-// } else {
-//     // no collision
-// }
+
 
 //----------- Health System ----------
 // heart icons 
@@ -193,16 +194,7 @@ if (strike === 1) {
     // game over
 }
 
-// Need to move this somewhere else but placeholder for now
 
-// creates an error when animating sprites so commenting out for now, not sure what
-// is happening with this code 
-//     controlsDisplay.draw()
-
-
-//      if (player.position.x == 1000){
-//         window.location.href = "roomOne.html";
-//     }
 animate();
 
 
