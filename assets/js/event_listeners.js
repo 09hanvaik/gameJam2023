@@ -3,7 +3,7 @@
 window.addEventListener("keydown", (event) => {
     switch (event.key) {
         // Double jump
-        case "w":
+        case " ":
             if (player.velocity.y === 0) {
                 // canDoubleJump = true
                 player.velocity.y = -10
@@ -15,7 +15,7 @@ window.addEventListener("keydown", (event) => {
             }
             break;
 
-        // Left
+        // Lefta
         case "a":
             key.a.pressed = true
             break
@@ -24,6 +24,12 @@ window.addEventListener("keydown", (event) => {
         case "d":
             key.d.pressed = true
             break
+    
+
+        // Inside
+        case "w":
+            key.w.pressed = true
+            break       
     }
 })
 
@@ -38,5 +44,10 @@ window.addEventListener("keyup", (event) => {
         case "d":
             key.d.pressed = false
             break
+        
+        // Inside
+        case "w":
+            key.w.pressed = false
+            break 
     }
 })
