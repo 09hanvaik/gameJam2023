@@ -75,6 +75,13 @@ const player = new Player({
         //     loop: true,
         //     imageSrc: "assets/img/sprites_animations/girlJumpLeft.png",
         // },
+        //We don't have entering door animation for sprite
+        // enterDoor: {
+        //     frameRate: 8,
+        //     frameBuffer: 4,
+        //     loop: false,
+        //     imageSrc: "assets/img/sprites_animations/girlJumpRight.png",
+        // },
     },
 })
 
@@ -87,8 +94,9 @@ const doors = [
         },
         imageSrc: "assets/img/sprites_animations/doorOpeningAnimation-Sheet.png",
         frameRate: 5,
-        frameBuffer: 50,
+        frameBuffer: 5,
         loop: false,
+        autoplay: false,
     }),
 
 ]
